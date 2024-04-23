@@ -33,11 +33,17 @@ function Main() {
   return (
     <div className="App">
 
-        <h2>Your secret code is</h2>
+       
 
-        <h4>{code}</h4>
+        <form>
 
-        <button onClick={logOut}>Log out</button>
+            <h2>Your secret code is</h2>
+
+            <h4>{code}</h4>
+
+            
+            <button onClick={logOut}>Log out</button>
+        </form>
 
     </div>
   );

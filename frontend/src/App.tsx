@@ -51,16 +51,16 @@ function App() {
       
       <form>
           <div>
-            <label>Username:</label>
             <input
               type="text"
+              placeholder='Username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div>
-            <label>Password:</label>
             <input
+              placeholder='Password'
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
