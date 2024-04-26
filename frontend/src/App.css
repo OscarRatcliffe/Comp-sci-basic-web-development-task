@@ -44,3 +44,7 @@ button {
   color: #282c34;
   border: 0;
 }
+
+#ErrorText {
+  color: #cb6262;
+}

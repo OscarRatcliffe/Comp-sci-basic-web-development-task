@@ -33,13 +33,18 @@ app.post("/login", (req: any, res: any) => {
 
             superSecuredB[i][2] = token
 
-            res.status(202)
             res.send({
                 "sessionToken": token
             })
 
+         } else {
+             
         }
     }
+
+    res.send({
+        "sessionToken": -1
+    })
 
 })
 

@@ -6,7 +6,7 @@ function Main() {
 
     function logOut() {
         document.cookie = "sessionToken= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-        window.location.replace("/");
+        window.location.replace("localhost:3000/");
     }
 
     const [code, setCode] = useState("");

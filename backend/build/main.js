@@ -22,12 +22,16 @@ app.post("/login", (req, res) => {
         if (username == superSecuredB[i][0] && password == superSecuredB[i][1]) {
             let token = Math.floor(Math.random() * 1001);
             superSecuredB[i][2] = token;
-            res.status(202);
             res.send({
                 "sessionToken": token
             });
         }
+        else {
+        }
     }
+    res.send({
+        "sessionToken": -1
+    });
 });
 app.get("/code/:SessionToken", (req, res) => {
     console.log("Request made");

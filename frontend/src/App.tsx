@@ -8,6 +8,7 @@ function App() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, seterror] = useState(' ');
 
   function loginCheck() {
 
@@ -24,13 +25,19 @@ function App() {
 
       success: (data) => {
 
-        document.cookie = `sessionToken=${data.sessionToken}`
-        window.location.replace("/App");
+        if (data.sessionToken == -1) {
+
+          seterror("Wrong username / Password")
+
+        } else {
+
+          document.cookie = `sessionToken=${data.sessionToken}`
+          window.location.replace("/App");
+
+        }
 
       },
       error: () => {
-
-        alert("Wrong username / Password")
 
       }
     })
@@ -69,6 +76,7 @@ function App() {
           <button type="button" onClick={loginCheck}>Login</button>
         </form>
 
+        <p id="ErrorText">{error}</p>
 
     </div>
   );
