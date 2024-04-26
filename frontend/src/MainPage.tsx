@@ -5,8 +5,8 @@ import './App.css';
 function Main() {
 
     function logOut() {
-        document.cookie = "sessionToken= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-        window.location.replace("localhost:3000/");
+      document.cookie = "sessionToken= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+      window.location.replace("/");
     }
 
     const [code, setCode] = useState("");
@@ -25,15 +25,13 @@ function Main() {
         },
         error: () => {
   
-          alert("User data could not be found - Please login")
+          window.location.replace("/");
   
         }
       })
 
   return (
     <div className="App">
-
-       
 
         <form>
 

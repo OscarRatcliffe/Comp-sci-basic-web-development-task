@@ -64,9 +64,6 @@ app.get("/code/:SessionToken", (req: any,res: any) => {
             res.send({
                 "code": superSecuredB[i][3]
             })
-
         }
-
     }
-    
 })
