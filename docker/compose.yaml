@@ -12,14 +12,14 @@ services:
     build: ../backend
     ports:
       - "4000:4000"
-    depends_on:
-      - database
+    # depends_on:
+    #   - database
 
-  database:
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
-    ports:
-      - "5432:5432"
+  # database:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_USER: myuser
+  #     POSTGRES_PASSWORD: mypassword
+  #     POSTGRES_DB: mydatabase
+  #   ports:
+  #     - "5432:5432"
